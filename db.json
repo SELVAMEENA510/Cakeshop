@@ -1,0 +1,61 @@
+{
+  "login": [
+    {
+      "id": "abf3",
+      "ftName": "Anshidha",
+      "email": "anu@321.com",
+      "phne": "8764536782",
+      "passwrd": "anshidha@21"
+    },
+    {
+      "id": "c5bf",
+      "ftName": "Meena",
+      "email": "meenu510@gmail.com",
+      "phne": "8765432987",
+      "passwrd": "meena21@"
+    },
+    {
+      "id": "1a03",
+      "ftName": "Meena",
+      "email": "anu@321.com",
+      "phne": "8764536782",
+      "passwrd": "meena21@"
+    },
+    {
+      "id": "30b0",
+      "ftName": "Meena",
+      "email": "meenu510@gmail.com",
+      "phne": "8765432987",
+      "passwrd": "meena@21"
+    },
+    {
+      "id": "7fa4",
+      "ftName": "madhu",
+      "email": "madhu12@gmail.com",
+      "phne": "8899663355",
+      "passwrd": "Madhu12@"
+    },
+    {
+      "id": "9cce",
+      "ftName": "sankari",
+      "email": "sankari@gmail.com",
+      "phne": "4568794561",
+      "passwrd": "sankarim@1"
+    },
+    {
+      "id": "3110",
+      "ftName": "sankari",
+      "email": "sankari@gmail.com",
+      "phne": "2345678944",
+      "passwrd": "sankari@11"
+    },
+    {
+      "id": "60a0",
+      "ftName": "mahi",
+      "email": "mahi12@gmail.com",
+      "phne": "4411225588",
+      "passwrd": "mahi12@"
+    }
+  ],
+  "products": []
+}
