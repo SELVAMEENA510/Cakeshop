@@ -31,12 +31,7 @@ export class HomeComponent{
   ngOnInit(): void {
     const currentUser = localStorage.getItem('CurrentUser');
 
-    // this.navigation=setTimeout(() => {
-    //   if(!currentUser){
-    //   alert('Login or Sign in to continue');
-    //   this.router.navigate(['/sign-in']); 
-    //   }
-    // }, 3000); 
+  
 
   
     // Start the automatic slider when the component initializes
