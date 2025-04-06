@@ -31,9 +31,6 @@ export class HomeComponent{
   ngOnInit(): void {
     const currentUser = localStorage.getItem('CurrentUser');
 
-  
-
-  
     // Start the automatic slider when the component initializes
     this.autoSlideInterval = setInterval(() => {
       this.nextImage();

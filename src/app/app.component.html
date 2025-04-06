@@ -4,11 +4,14 @@
 <div>
   <header>
     <ul>
-      <li><a [routerLink]="['']">Home</a></li>
-      <li><a [routerLink]="['profile']">Profile</a></li>
-      <li><a [routerLink]="['login']">Sign In</a></li>
+      <!-- <li><a [routerLink]="['']">Home</a></li> -->
+      <!-- <li><a [routerLink]="['profile']">Profile</a></li> -->
+      <!-- <li><a [routerLink]="['login']">Sign In</a></li> -->
       <li><a [routerLink]="['cart']"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmkAT6IJ7eZlJx0X70xkwOZ7DHhpJ4XHzJRw&s" width="40px" alt=""></a></li>
-    
+      <li><a [routerLink]="['login']">Sign-up</a></li>
+      <li><a [routerLink]="['profile']">Profile</a></li>
+      <li><a [routerLink]="['']">Home</a></li>
+      
     </ul>
   </header>
   <router-outlet></router-outlet>
@@ -26,9 +29,10 @@
 
         <div class="footer-links">
           <ul>
-            <li><a [routerLink]="['/']">Home</a></li>
+            <!-- <li><a [routerLink]="['/']">Home</a></li> -->
             <li><a [routerLink]="['/about']">About Us</a></li>
             <li><a [routerLink]="['/cart']">Cart</a></li>
+            <li><a [routerLink]="['/']">Home</a></li>
           </ul>
         </div>
         

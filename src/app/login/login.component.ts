@@ -6,6 +6,7 @@ import { NgForm } from '@angular/forms';
 import { State } from '../app.component';
 
 
+
 @Component({
   selector: 'app-login',
   standalone: false,
@@ -24,25 +25,41 @@ export class LoginComponent implements OnInit {
     passwrd: ''
   };
   loginn: any[] = [];
+  submittedSuccessfully: boolean = false;
+  showProfileMessage: boolean = false;
 
   ngOnInit(): void {
+    
   }
   onSubmit(form: any) {
     if (form.valid) {
       console.log('Submitting:', this.login);
-      this.loginservice.addData(this.login).subscribe({
-        next: (res) => {
-          console.log("User added:", res);
-          localStorage.setItem('CurrentUser', JSON.stringify(res));
-          alert("sign in successfull");
-          this.router.navigate(['']);
-        },
-        error: (err) => {
-          console.log("Error adding user:", err);
+      alert("Form submitted successfully");
+      this.loginservice.addUser({ ...this.login });
+      // this.loginservice.setUser(this.login);
+      form.reset();
+      this.submittedSuccessfully = true;
+      this.showProfileMessage = true;
 
-        }
-      });
+      // this.router.navigate(['/profile'])
+      // localStorage.setItem('currentUser', JSON.stringify(this.login));
+      // this.loginservice.addData(this.login).subscribe({
+      //   next: (res) => {
+      //     console.log("User added:", res);
+      //     localStorage.setItem('CurrentUser', JSON.stringify(res));
+      //     alert("sign in successfull");
+      //     this.router.navigate(['']);
+      //   },
+      //   error: (err) => {
+      //     console.log("Error adding user:", err);
+
+      //   }
+      // });
     }
+  }
+
+  goToProfile() {
+    this.router.navigate(['/profile']);
   }
   onlyNumbers(event: KeyboardEvent): void {
     const charCode = event.charCode;

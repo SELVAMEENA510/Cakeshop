@@ -8,41 +8,6 @@
       "passwrd": "anshidha@21"
     },
     {
-      "id": "c5bf",
-      "ftName": "Meena",
-      "email": "meenu510@gmail.com",
-      "phne": "8765432987",
-      "passwrd": "meena21@"
-    },
-    {
-      "id": "1a03",
-      "ftName": "Meena",
-      "email": "anu@321.com",
-      "phne": "8764536782",
-      "passwrd": "meena21@"
-    },
-    {
-      "id": "30b0",
-      "ftName": "Meena",
-      "email": "meenu510@gmail.com",
-      "phne": "8765432987",
-      "passwrd": "meena@21"
-    },
-    {
-      "id": "7fa4",
-      "ftName": "madhu",
-      "email": "madhu12@gmail.com",
-      "phne": "8899663355",
-      "passwrd": "Madhu12@"
-    },
-    {
-      "id": "9cce",
-      "ftName": "sankari",
-      "email": "sankari@gmail.com",
-      "phne": "4568794561",
-      "passwrd": "sankarim@1"
-    },
-    {
       "id": "3110",
       "ftName": "sankari",
       "email": "sankari@gmail.com",
@@ -55,7 +20,30 @@
       "email": "mahi12@gmail.com",
       "phne": "4411225588",
       "passwrd": "mahi12@"
+    },
+    {
+      "id": "69ca",
+      "ftName": "keerthi",
+      "email": "keerthi12@gmail.com",
+      "phne": "4411557788",
+      "passwrd": "keerthy12@"
+    },
+    {
+      "id": "8f9c",
+      "ftName": "keerthy",
+      "email": "mm12@gmail.com",
+      "phne": "4411775522",
+      "passwrd": "keerthy12@"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": "6445",
+      "build": "1/224",
+      "street": "North car street",
+      "city": "Tenkasi",
+      "phne": "8765432987",
+      "method": "creditCard"
+    }
+  ]
 }

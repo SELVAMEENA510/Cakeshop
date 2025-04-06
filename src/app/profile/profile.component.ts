@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,14 +11,16 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
-constructor(private router:Router){}
+constructor(private router:Router , private loginservice:LoginService){}
   ngOnInit(): void {
-    // Retrieve the stored user data from localStorage
-    this.currentUser = JSON.parse(localStorage.getItem('CurrentUser') || '{}');
+    
+    this.currentUser = this.loginservice.getAllUser();
+  
   }
   logout(): void {
     alert("Logged out");
-    localStorage.removeItem('CurrentUser');
+    // localStorage.removeItem('CurrentUser');
+    this.loginservice.clearUsers();
     this.router.navigate(['']);
   }
 }

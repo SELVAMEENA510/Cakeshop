@@ -1,10 +1,43 @@
-<div class="profile-container">
-    <h2 class="profile-title">{{ currentUser.ftName }} Profile</h2>
-    
-    <div class="profile-details">
-      <p><strong>Email:</strong> {{ currentUser.email }}</p>
-      <p><strong>Phone:</strong> {{ currentUser.phne }}</p>
+  <!-- <div class="profile-container">
+      <h2 class="profile-title">{{ currentUser.ftName }} Profile</h2>
+      
+      <div class="profile-details">
+        <p><strong>Email:</strong> {{ currentUser.email }}</p>
+        <p><strong>Phone:</strong> {{ currentUser.phne }}</p>
+      </div>
+      <button (click)="logout()" class="logout-btn">Log Out</button>
     </div>
-    <button (click)="logout()" class="logout-btn">Log Out</button>
-  </div>
-  
+     -->
+
+     <div class="profile-container">
+
+      <!-- IF data exists, show profile -->
+      <ng-container *ngIf="currentUser?.ftName || currentUser?.email || currentUser?.phne">
+        <h2 class="profile-title" *ngIf="currentUser?.ftName">
+          {{ currentUser.ftName }} Profile
+        </h2>
+    
+        <div class="profile-details">
+          <p *ngIf="currentUser?.email">
+            <strong>Email:</strong> {{ currentUser.email }}
+          </p>
+          <p *ngIf="currentUser?.phne">
+            <strong>Phone:</strong> {{ currentUser.phne }}
+          </p>
+        </div>
+    
+        <button *ngIf="currentUser?.ftName || currentUser?.email || currentUser?.phne" 
+                (click)="logout()" 
+                class="logout-btn">
+          Log Out
+        </button>
+      </ng-container>
+    
+      <!-- ELSE: Show "Sign up to see profile" -->
+      <p *ngIf="!currentUser?.ftName && !currentUser?.email && !currentUser?.phne" class="signmsg">
+       <b>Sign up to see profile</b> 
+      </p>
+    
+    </div>
+    
+    

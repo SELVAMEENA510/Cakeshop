@@ -1,5 +1,5 @@
 <div class="main">
-    <h1>Sign In</h1>
+    <h1>Sign-up</h1>
 </div>
 
 <div class="container">
@@ -56,10 +56,14 @@
 
        
 <br>
-        <button type="submit"  [disabled]="loginForm.invalid">
+        <button type="submit"  [disabled]="loginForm.invalid    ">
             Submit
         </button>
     <p>Already have an account? <a href="#" (click)="change($event)">Log in here</a></p> 
+    <div *ngIf="showProfileMessage" class="success-container">
+        <p class="animated-msg">User already signed in, click to see profile</p>
+        <button (click)="goToProfile()">Go to Profile</button>
+      </div>
 
 <router-outlet></router-outlet>
 </form>

@@ -23,28 +23,31 @@ export class SignInComponent implements OnInit {
   Onlogin(form: NgForm): void {
     if (form.valid) {
       console.log("Submittig Sign-in data:", this.sign)
+      alert("Login successful");
+      form.reset();
+      // this.router.navigate(['/login']);
 
-      this.http.get<any[]>("http://localhost:3000/login").subscribe({
-        next: (users) => {
-          const data = users.find((u) => (u.ftName.trim().toLowerCase()) === (this.sign.username.trim().toLowerCase()) &&
-            u.passwrd === this.sign.password);
-          if (data) {
-            alert("Login successfull");
-            console.log("Matched User Data:", data);
+      // this.http.get<any[]>("https://67ed50544387d9117bbd2cdf.mockapi.io/cakeshop/sign-up/").subscribe({
+      //   next: (users) => {
+      //     const data = users.find((u) => (u.ftName.trim().toLowerCase()) === (this.sign.username.trim().toLowerCase()) &&
+      //       u.passwrd === this.sign.password);
+      //     if (data) {
+      //       alert("Login successfull");
+      //       console.log("Matched User Data:", data);
 
-            localStorage.setItem('CurrentUser', JSON.stringify(data));
-            State.logged = true;
-            this.router.navigate(['']);
-          }
-          else {
-            alert("Invalild Username or Password");
-          }
-        },
-        error: (err) => {
-          console.error("error fetching Users:", err);
-          alert("An error occured while logging in. please try again")
-        }
-      });
+      //       localStorage.setItem('CurrentUser', JSON.stringify(data));
+      //       State.logged = true;
+      //       this.router.navigate(['']);
+      //     }
+      //     else {
+      //       alert("Invalild Username or Password");
+      //     }
+      //   },
+      //   error: (err) => {
+      //     console.error("error fetching Users:", err);
+      //     alert("An error occured while logging in. please try again")
+      //   }
+      // });
     }
     else {
       alert('Please fill the form correctly')

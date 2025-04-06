@@ -35,14 +35,12 @@ ngOnInit(): void {
   }
   order(form:NgForm){
     if (form.valid) {
-      alert("form submitted")
-      this.http.post('http://localhost:3000/login', this.payment).subscribe(Response=>{
-        console.log(Response); 
+      alert("Order placed successfully")
+      // this.http.post('http://localhost:3000/products', this.payment).subscribe(Response=>{
+      //   console.log(Response); 
         form.reset();
-      });
+      // });
       
-    
-    
     
     }
   }
